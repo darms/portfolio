@@ -1,18 +1,21 @@
-.fa {
+.icon-menu {
   float: right;
+
 }
 
-.core-nav{
-  diplay: none;
+.core-nav ul{
+  display: none;
   list-style: none;
   clear: both;
 }
 
-.core-nav: hover ul {
+
+.core-nav:hover ul {
   display: block;
 }
+
 @media screen and (min-width: 650px) {
-  .fa{
+  .icon-menu{
     display:none;
   }
   .core-nav ul {
