@@ -1,0 +1,27 @@
+.icon-menu {
+  float: right;
+
+}
+
+.core-nav ul{
+  display: none;
+  list-style: none;
+  clear: both;
+}
+
+
+.core-nav:hover ul {
+  display: block;
+}
+
+@media screen and (min-width: 650px) {
+  .icon-menu{
+    display:none;
+  }
+  .core-nav ul {
+    display: block;
+  }
+.core-nav li {
+  display: inline-block;
+}
+}
