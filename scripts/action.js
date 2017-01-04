@@ -19,3 +19,7 @@ function Project (info) {
   this.solution = info.solution;
   this.timeFrame = info.timeFrame;
 }
+
+Project.prototype.toHtml = function() {
+  var $newArticle = $('article.template').clone();
+  $newArticle.attr('data-category', this.category);
