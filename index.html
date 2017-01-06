@@ -13,6 +13,15 @@
   Creative Technologist
 </title>
 
+
+<script id="neighborhood-template" type="text/x-handlebars-template">
+        <h1>{{title}} </h1>
+        <h2>{{category}}<h2>
+        <h2>{{author}}</h2>
+        <h2>{{authorURL}}</h2>
+        <h2>{{publishedOn}}</h2>
+        <p>{{{body}}}</p>
+      </script>
 </head>
 
 <body>
@@ -39,23 +48,8 @@
     </div>
 
   </nav>
-  <div class="main">
-    <section id="showCase">
-      <article class="template" data-category="sites">
-        <header>
-    <h2> Project Name</h2>
-    <div class="basicInfo">
-    <p>One a those days, huh. Wal, a wiser fella than m'self once said, sometimes you eat the bar and sometimes the bar, wal, he eats you. That wasn't her toe. Excuse me! Mark it zero. Next frame. Mind if I smoke a jay? Brandt can't watch though. Or he has to pay a hundred. Sex. The physical act of love. Coitus. Do you like it? Shomer shabbos.</p>
-    <h2> Tools Used </h2>
-  </div>
-  <section class="resolution">
-    <h2>Solution</h2>
-    <p></p>
-    <div id ="time">
-    <h2>Time Frame</h2>
-  </div>
-  </section>
-</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="scripts/sourceData.js"></script>
   <script src="scripts/action.js"></script>
