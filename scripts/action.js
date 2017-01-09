@@ -1,25 +1,25 @@
-//variable for images that will link with the different projects -var images = [];
-// day one constructor function
-// function Project (projName, problemDomain, toolsUsed, solution, timeFrame) {
-//   this.projName = projName;
-//   this.problemDomain = problemDomain;
-//   this.toolsUsed = toolsUsed;
-//   this.solution = solution;
-//   this.timeFrame = timeFrame;
-// }
+var projects = [];
 
-//refactored on day 2
-//structure influenced by lab on day 2
-
-var portfolioPieces = [];
-function Project (info) {
-  this.projName = info.projName;
+function Article (info) {
   this.problemDomain = info.problemDomain;
-  this.toolsUsed = info.toolsUsed;
-  this.solution = info.solution;
+  this.body = info.body;
+  this.title = info.title;
   this.timeFrame = info.timeFrame;
 }
-
-Project.prototype.toHtml = function() {
+Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
-  $newArticle.attr('data-category', this.category);
+  $newArticle.find('.problem-body').html(this.problemDomain);
+  $newArticle.find('.solution-body').html(this.body);
+  $newArticle.find('h2').text(this.title);
+  $newArticle.find('.timeFrame').html(this.timeFrame);
+
+  $newArticle.removeClass('template');
+  return $newArticle;
+};
+
+projectArticles.forEach(function(ele) {
+  projects.push(new Article(ele));
+});
+projects.forEach(function(article) {
+  $('#projects').append(article.toHtml());
+});
