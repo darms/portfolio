@@ -10,7 +10,7 @@ Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.find('.problem-body').html(this.problemDomain);
   $newArticle.find('.solution-body').html(this.body);
-  $newArticle.find('h1').text(this.title);
+  $newArticle.find('h2').text(this.title);
   $newArticle.find('.timeFrame').html(this.timeFrame);
 
   $newArticle.removeClass('template');
