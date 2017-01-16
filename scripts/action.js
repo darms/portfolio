@@ -12,7 +12,6 @@ Article.prototype.toHtml = function() {
   $newArticle.find('.solution-body').html(this.body);
   $newArticle.find('h2').text(this.title);
   $newArticle.find('.timeFrame').html(this.timeFrame);
-
   $newArticle.removeClass('template');
   return $newArticle;
 };
@@ -21,5 +20,16 @@ projectArticles.forEach(function(ele) {
   projects.push(new Article(ele));
 });
 projects.forEach(function(article) {
-  $('#projects').append(article.toHtml());
+  $('#work').append(article.toHtml());
 });
+
+Article.navView = function() {
+  $('.core-nav').on('click', '.tab', function() {
+    var $dataContent = $(this).attr('data-content');
+    $('.tab-content').hide();
+    $('#' + $dataContent + '.tab-content').fadeIn();
+  });
+  $('.core-nav .tab:first').click();
+};
+
+Article.navView();
