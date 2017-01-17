@@ -10,4 +10,5 @@ Article.navView = function() {
   $('.core-nav .tab:first').click();
 };
 
+
 Article.navView();
