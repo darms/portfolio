@@ -1,15 +1,13 @@
 'use strict';
-
 var projects = [];
-
-function newProj (opts) {
+function NewProj (opts) {
   for (var key in opts) {
     this[key] = opts[key];
   }
-};
+}
 
-Article.prototype.toHtml = function() {
-  var source = $('#portfolio-template').html(this);
+NewProj.prototype.toHtml = function() {
+  var source = $('#portfolio-template').html();
   var context = projectArticles;
   var templateRender = Handlebars.compile(source);
   return templateRender(this);
