@@ -11,6 +11,17 @@
   Creative Technologist
 </title>
 <script id="portfolio-template" type="text/x-handlebars-template">
+  <article class="template">
+    <section id="work" class="tab-content">
+    <header>
+      <h2></h2>
+    </header>
+      <section class="problem-body"></section>
+      <section class="solution-body"></section>
+      <section class="timeFrame"></section>
+      </section>
+  </article>
+</script>
 </head>
 
 <body>
@@ -28,40 +39,24 @@
     <div class="icon-menu">
     <i class="fa fa-bars fa-4x" aria-hidden="true"></i>
   </div>
-
-    <ul>
-      <li class="tab" data-content="about"><a href="#"> About</a></li>
-      <li class="tab" data-content="work"><a href="#"> Work</a></li>
-      <li class="tab" data-content="contact"><a href="#"> Contact</a></li>
-    </div>
+  <ul>
+    <li class="tab" data-content="about"><a href="#"> About</a></li>
+    <li class="tab" data-content="work"><a href="#"> Work</a></li>
+    <li class="tab" data-content="contact"><a href="#"> Contact</a></li>
+  </div>
 
 <!-- parts of this structure were taken from the lab on day 3 & 4 -->
-<article class="template">
-  <section id="work" class="tab-content">
-
-  <header>
-    <h2></h2>
-  </header>
-    <section class="problem-body"></section>
-    <section class="solution-body"></section>
-    <section class="timeFrame"></section>
-    </section>
-</article>
-
   <section id="about" class="tab-content">
     <h2>About Me</h2>
     <p>Hi, my name is Darcy!</p>
   </section>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-  <script src="https://use.fontawesome.com/4577a24050.js"></script>
-    <script src="scripts/sourceData.js"></script>
-    <script src="scripts/action.js"></script>
-
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+<script src="https://use.fontawesome.com/4577a24050.js"></script>
+<script src="scripts/sourceData.js"></script>
+<script src="scripts/action.js"></script>
 
 </body>
 </html>

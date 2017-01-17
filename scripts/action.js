@@ -26,6 +26,16 @@ projects.forEach(function(ourNewProjectObject){
   $('#articles').append(ourNewProjectObject).toHtml();
 });
 
+Article.navView = function() {
+  $('.core-nav').on('click', '.tab', function() {
+    var $dataContent = $(this).attr('data-content');
+    $('.tab-content').hide();
+    $('#' + $dataContent + '.tab-content').fadeIn();
+  });
+  $('.core-nav .tab:first').click();
+};
+
+
 // Article.prototype.toHtml = function() {
 //   var $newArticle = $('article.template').clone();
 //   $newArticle.find('.problem-body').html(this.problemDomain);
@@ -43,3 +53,5 @@ projectArticles.forEach(function(ele) {
 projects.forEach(function(article) {
   $('#projects').append(article.toHtml());
 });
+
+Article.navView();
