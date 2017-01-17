@@ -1,4 +1,5 @@
 var projects = [];
+
 function newProj (opts) {
   for (key in opts) {
     this[key] = opts[key];
