@@ -11,4 +11,5 @@ Article.navView = function() {
 };
 
 
+
 Article.navView();
