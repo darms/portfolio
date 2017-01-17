@@ -1,7 +1,9 @@
+'use strict';
+
 var projects = [];
 
 function newProj (opts) {
-  for (key in opts) {
+  for (var key in opts) {
     this[key] = opts[key];
   }
 };
@@ -14,29 +16,9 @@ Article.prototype.toHtml = function() {
 };
 
 projectArticles.forEach(function(fish){
-  projects.push(new Article(fish));
+  projects.push(new NewProj((fish));
 });
 
-projects.forEach(function(ourNewProjectObject){
-  $('#articles').append(ourNewProjectObject).toHtml();
+projects.forEach(function(NewProj){
+  $('#work').append(NewProj).toHtml();
 });
-
-Article.navView = function() {
-  $('.core-nav').on('click', '.tab', function() {
-    var $dataContent = $(this).attr('data-content');
-    $('.tab-content').hide();
-    $('#' + $dataContent + '.tab-content').fadeIn();
-  });
-  $('.core-nav .tab:first').click();
-};
-
-
-
-projectArticles.forEach(function(ele) {
-  projects.push(new Article(ele));
-});
-projects.forEach(function(article) {
-  $('#projects').append(article.toHtml());
-});
-
-Article.navView();

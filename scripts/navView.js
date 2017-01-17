@@ -1,9 +1,13 @@
 'use strict';
-function navView () {
-  $('.core-nav').on('click', '.tab', function(){
+
+navView();
+Article.navView = function() {
+  $('.core-nav').on('click', '.tab', function() {
+    var $dataContent = $(this).attr('data-content');
     $('.tab-content').hide();
-    $('#'+$(this).attr('data-content')).fadeIn();
+    $('#' + $dataContent + '.tab-content').fadeIn();
   });
   $('.core-nav .tab:first').click();
-}
-navView();
+};
+
+Article.navView();
