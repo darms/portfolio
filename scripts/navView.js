@@ -1,7 +1,7 @@
-'use strict';
 
-navView();
-Article.navView = function() {
+'use strict';
+var navView = {};
+navView.handleMainNav = function() {
   $('.core-nav').on('click', '.tab', function() {
     var $dataContent = $(this).attr('data-content');
     $('.tab-content').hide();
@@ -9,7 +9,4 @@ Article.navView = function() {
   });
   $('.core-nav .tab:first').click();
 };
-
-
-
-Article.navView();
+navView.handleMainNav();

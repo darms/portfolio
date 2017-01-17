@@ -9,16 +9,16 @@ function newProj (opts) {
 };
 
 Article.prototype.toHtml = function() {
-  var source = $('#work').html();
+  var source = $('#portfolio-template').html(this);
   var context = projectArticles;
   var templateRender = Handlebars.compile(source);
-  return templateRender();
+  return templateRender(this);
 };
 
 projectArticles.forEach(function(fish){
-  projects.push(new NewProj((fish));
+  projects.push(new NewProj(fish));
 });
 
-projects.forEach(function(NewProj){
-  $('#work').append(NewProj).toHtml();
+projects.forEach(function(ourNewProjectObject){
+  $('#work').append(ourNewProjectObject.toHtml(this));
 });
