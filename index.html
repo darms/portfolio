@@ -12,15 +12,13 @@
 </title>
 <script id="portfolio-template" type="text/x-handlebars-template">
   <article class="template">
-    <section id="work" class="tab-content">
-    <header>
-      <h2></h2>
+        <header>
+      <h2>{{title}}</h2>
     </header>
-      <section class="problem-body"></section>
-      <section class="solution-body"></section>
-      <section class="timeFrame"></section>
-      </section>
-  </article>
+      <section class="problem-body">{{{problemDomain}}}</section>
+      <section class="solution-body">{{{body}}}</section>
+      <section class="timeFrame">{{{timeFrame}}}</section>
+      </article>
 </script>
 </head>
 
@@ -51,12 +49,15 @@
     <p>Hi, my name is Darcy!</p>
   </section>
 
+  <section id="work" class="tab-content">
+  </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
 <script src="https://use.fontawesome.com/4577a24050.js"></script>
 <script src="scripts/sourceData.js"></script>
 <script src="scripts/action.js"></script>
+<script src="scripts/navView.js"></script>
 
 </body>
 </html>
